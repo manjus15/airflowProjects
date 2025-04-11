@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>jawdaDatafromFact</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+      <parameter>
+        <name>BI_SOURCE_DB</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>BI_SOURCE_HOST</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>BI_SOURCE_PWD</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>BI_SOURCE_SCHEMA</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>BI_SOURCE_USER</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>CenterID</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>FromDate</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>PRI_SOURCE_HOST</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>SEC_SOURCE_HOST</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>SOURCE_DB</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>SOURCE_PWD</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>SOURCE_SCHEMA</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>SOURCE_USER</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>TARGET_DB</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>TARGET_HOST</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>TARGET_PWD</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>TARGET_SCHEMA</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>TARGET_USER</name>
+        <default_value />
+        <description />
+      </parameter>
+      <parameter>
+        <name>ToDate</name>
+        <default_value />
+        <description />
+      </parameter>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2019/02/07 11:13:55.408</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2019/02/07 11:13:55.408</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>BI_SOURCE</name>
+    <server>${BI_SOURCE_HOST}</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>${BI_SOURCE_DB}</database>
+    <port>5432</port>
+    <username>${BI_SOURCE_USER}</username>
+    <password>${BI_SOURCE_PWD}</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PREFERRED_SCHEMA_NAME</code>
+        <attribute>${BI_SOURCE_SCHEMA}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SQL_CONNECT</code>
+        <attribute>set search_path to ${BI_SOURCE_SCHEMA}</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>TARGET</name>
+    <server>${TARGET_HOST}</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>${TARGET_DB}</database>
+    <port>5432</port>
+    <username>${TARGET_USER}</username>
+    <password>${TARGET_PWD}</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PREFERRED_SCHEMA_NAME</code>
+        <attribute>${TARGET_SCHEMA}</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SQL_CONNECT</code>
+        <attribute>SET SEARCH_PATH TO ${TARGET_SCHEMA};</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>datafromFact</from>
+      <to>rcm_claim_data</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>datafromFact for IPNS</from>
+      <to>rcm_claim_data 2</to>
+      <enabled>N</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>datafromFact</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>BI_SOURCE</connection>
+    <sql>SELECT null::text AS insurancecompany, null::text AS tpa_name, receiverid, transactiondate ,claimid,memberid, payerid,providerid, emiratesidnumber , gross, patientshare, netclaim,
+encountertype,patientid,null::text AS patientname,null::text AS patientbirthdate,null::text AS age,null::text AS gender,encounterstart,encounterend,
+encounterstarttype,encounterendtype,null::text AS Encountertransfersource,null::text AS Encountertransferdestination,primary_icd AS Encounterdiagnosisprincipal,
+null::text AS Encounterdiagnosissecondary1,null::text AS Encounterdiagnosissecondary2, null::text AS Encounterdiagnosissecondary3,
+null::text AS Encounterdiagnosissecondary4,null::text AS Encounterdiagnosissecondary5,null::text AS Encounterdiagnosissecondary6,
+null::text AS Encounterdiagnosissecondary7,null::text AS Encounterdiagnosissecondary8,null::text AS Encounterdiagnosissecondary9,
+null::text AS Encounterdiagnosissecondary10,null::text AS Encounterdiagnosissecondary11,null::text AS Encounterdiagnosissecondary12,
+null::text AS Encounterdiagnosissecondary13,null::text AS Encounterdiagnosissecondary14,null::text AS Encounterdiagnosissecondary15,activityid, 
+activitystart,activitytype,activitycode,activityquantity,activitynet,orderingclinician,prior_auth_id AS PriorAuthorizationID,null::text AS Obstype1,
+null::text AS Obscode1,null::text AS Obsvalue1,null::text AS Obsvaluetype1,null::text AS Obstype2,null::text AS Obscode2,null::text AS Obsvalue2,
+null::text AS Obsvaluetype2,null::text AS Obstype3,null::text AS Obscode3,null::text AS Obsvalue3,null::text AS Obsvaluetype3,null::text AS Obstype4,
+null::text AS Obscode4,null::text AS Obsvalue4,null::text AS Obsvaluetype4,null::text AS Obstype5,null::text AS Obscode5,null::text AS Obsvalue5,
+null::text AS Obsvaluetype5,clinician, visit_id,charge_id ,insurance_co_id,admitting_dr_id,null::text AS doctorname,null::text AS doctorsdepartment,
+category, submission_date, tpa_id, fcl.center_id, act_description, plan_id, registration_date,
+org_id as rate_plan_id,insurance_category_id , null::text as CenterName, null::text as Rate_Plan, null::text as Insurance_Plan,
+ null::text as Insurance_Plan_type,patient_type
+ FROM 	f_claim_submission fcl
+JOIN m_hospital_center_master hcm on hcm.center_id::text=fcl.center_id
+WHERE hcm.center_id in (${CenterID}) AND submission_date::date>= ${FromDate} AND submission_date::date &lt;= ${ToDate} 
+		AND org_sub_seq = 1 ;</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>rcm_claim_data</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>TARGET</connection>
+    <schema>nmc</schema>
+    <table>rcm_claim_data</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>insurancecompany</column_name>
+        <stream_name>insurancecompany</stream_name>
+      </field>
+      <field>
+        <column_name>tpa_name</column_name>
+        <stream_name>tpa_name</stream_name>
+      </field>
+      <field>
+        <column_name>receiverid</column_name>
+        <stream_name>receiverid</stream_name>
+      </field>
+      <field>
+        <column_name>transactiondate</column_name>
+        <stream_name>transactiondate</stream_name>
+      </field>
+      <field>
+        <column_name>claimid</column_name>
+        <stream_name>claimid</stream_name>
+      </field>
+      <field>
+        <column_name>memberid</column_name>
+        <stream_name>memberid</stream_name>
+      </field>
+      <field>
+        <column_name>payerid</column_name>
+        <stream_name>payerid</stream_name>
+      </field>
+      <field>
+        <column_name>providerid</column_name>
+        <stream_name>providerid</stream_name>
+      </field>
+      <field>
+        <column_name>emiratesidnumber</column_name>
+        <stream_name>emiratesidnumber</stream_name>
+      </field>
+      <field>
+        <column_name>gross</column_name>
+        <stream_name>gross</stream_name>
+      </field>
+      <field>
+        <column_name>patientshare</column_name>
+        <stream_name>patientshare</stream_name>
+      </field>
+      <field>
+        <column_name>netclaim</column_name>
+        <stream_name>netclaim</stream_name>
+      </field>
+      <field>
+        <column_name>encountertype</column_name>
+        <stream_name>encountertype</stream_name>
+      </field>
+      <field>
+        <column_name>patientid</column_name>
+        <stream_name>patientid</stream_name>
+      </field>
+      <field>
+        <column_name>patientname</column_name>
+        <stream_name>patientname</stream_name>
+      </field>
+      <field>
+        <column_name>patientbirthdate</column_name>
+        <stream_name>patientbirthdate</stream_name>
+      </field>
+      <field>
+        <column_name>age</column_name>
+        <stream_name>age</stream_name>
+      </field>
+      <field>
+        <column_name>gender</column_name>
+        <stream_name>gender</stream_name>
+      </field>
+      <field>
+        <column_name>encounterstart</column_name>
+        <stream_name>encounterstart</stream_name>
+      </field>
+      <field>
+        <column_name>encounterend</column_name>
+        <stream_name>encounterend</stream_name>
+      </field>
+      <field>
+        <column_name>encounterstarttype</column_name>
+        <stream_name>encounterstarttype</stream_name>
+      </field>
+      <field>
+        <column_name>encounterendtype</column_name>
+        <stream_name>encounterendtype</stream_name>
+      </field>
+      <field>
+        <column_name>encountertransfersource</column_name>
+        <stream_name>encountertransfersource</stream_name>
+      </field>
+      <field>
+        <column_name>encountertransferdestination</column_name>
+        <stream_name>encountertransferdestination</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosisprincipal</column_name>
+        <stream_name>encounterdiagnosisprincipal</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary1</column_name>
+        <stream_name>encounterdiagnosissecondary1</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary2</column_name>
+        <stream_name>encounterdiagnosissecondary2</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary3</column_name>
+        <stream_name>encounterdiagnosissecondary3</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary4</column_name>
+        <stream_name>encounterdiagnosissecondary4</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary5</column_name>
+        <stream_name>encounterdiagnosissecondary5</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary6</column_name>
+        <stream_name>encounterdiagnosissecondary6</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary7</column_name>
+        <stream_name>encounterdiagnosissecondary7</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary8</column_name>
+        <stream_name>encounterdiagnosissecondary8</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary9</column_name>
+        <stream_name>encounterdiagnosissecondary9</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary10</column_name>
+        <stream_name>encounterdiagnosissecondary10</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary11</column_name>
+        <stream_name>encounterdiagnosissecondary11</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary12</column_name>
+        <stream_name>encounterdiagnosissecondary12</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary13</column_name>
+        <stream_name>encounterdiagnosissecondary13</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary14</column_name>
+        <stream_name>encounterdiagnosissecondary14</stream_name>
+      </field>
+      <field>
+        <column_name>encounterdiagnosissecondary15</column_name>
+        <stream_name>encounterdiagnosissecondary15</stream_name>
+      </field>
+      <field>
+        <column_name>activityid</column_name>
+        <stream_name>activityid</stream_name>
+      </field>
+      <field>
+        <column_name>activitystart</column_name>
+        <stream_name>activitystart</stream_name>
+      </field>
+      <field>
+        <column_name>activitytype</column_name>
+        <stream_name>activitytype</stream_name>
+      </field>
+      <field>
+        <column_name>activitycode</column_name>
+        <stream_name>activitycode</stream_name>
+      </field>
+      <field>
+        <column_name>activityquantity</column_name>
+        <stream_name>activityquantity</stream_name>
+      </field>
+      <field>
+        <column_name>activitynet</column_name>
+        <stream_name>activitynet</stream_name>
+      </field>
+      <field>
+        <column_name>orderingclinician</column_name>
+        <stream_name>orderingclinician</stream_name>
+      </field>
+      <field>
+        <column_name>priorauthorizationid</column_name>
+        <stream_name>priorauthorizationid</stream_name>
+      </field>
+      <field>
+        <column_name>obstype1</column_name>
+        <stream_name>obstype1</stream_name>
+      </field>
+      <field>
+        <column_name>obscode1</column_name>
+        <stream_name>obscode1</stream_name>
+      </field>
+      <field>
+        <column_name>obsvalue1</column_name>
+        <stream_name>obsvalue1</stream_name>
+      </field>
+      <field>
+        <column_name>obsvaluetype1</column_name>
+        <stream_name>obsvaluetype1</stream_name>
+      </field>
+      <field>
+        <column_name>obstype2</column_name>
+        <stream_name>obstype2</stream_name>
+      </field>
+      <field>
+        <column_name>obscode2</column_name>
+        <stream_name>obscode2</stream_name>
+      </field>
+      <field>
+        <column_name>obsvalue2</column_name>
+        <stream_name>obsvalue2</stream_name>
+      </field>
+      <field>
+        <column_name>obsvaluetype2</column_name>
+        <stream_name>obsvaluetype2</stream_name>
+      </field>
+      <field>
+        <column_name>obstype3</column_name>
+        <stream_name>obstype3</stream_name>
+      </field>
+      <field>
+        <column_name>obscode3</column_name>
+        <stream_name>obscode3</stream_name>
+      </field>
+      <field>
+        <column_name>obsvalue3</column_name>
+        <stream_name>obsvalue3</stream_name>
+      </field>
+      <field>
+        <column_name>obsvaluetype3</column_name>
+        <stream_name>obsvaluetype3</stream_name>
+      </field>
+      <field>
+        <column_name>obstype4</column_name>
+        <stream_name>obstype4</stream_name>
+      </field>
+      <field>
+        <column_name>obscode4</column_name>
+        <stream_name>obscode4</stream_name>
+      </field>
+      <field>
+        <column_name>obsvalue4</column_name>
+        <stream_name>obsvalue4</stream_name>
+      </field>
+      <field>
+        <column_name>obsvaluetype4</column_name>
+        <stream_name>obsvaluetype4</stream_name>
+      </field>
+      <field>
+        <column_name>obstype5</column_name>
+        <stream_name>obstype5</stream_name>
+      </field>
+      <field>
+        <column_name>obscode5</column_name>
+        <stream_name>obscode5</stream_name>
+      </field>
+      <field>
+        <column_name>obsvalue5</column_name>
+        <stream_name>obsvalue5</stream_name>
+      </field>
+      <field>
+        <column_name>obsvaluetype5</column_name>
+        <stream_name>obsvaluetype5</stream_name>
+      </field>
+      <field>
+        <column_name>clinician</column_name>
+        <stream_name>clinician</stream_name>
+      </field>
+      <field>
+        <column_name>visit_id</column_name>
+        <stream_name>visit_id</stream_name>
+      </field>
+      <field>
+        <column_name>charge_id</column_name>
+        <stream_name>charge_id</stream_name>
+      </field>
+      <field>
+        <column_name>insurance_co_id</column_name>
+        <stream_name>insurance_co_id</stream_name>
+      </field>
+      <field>
+        <column_name>admitting_dr_id</column_name>
+        <stream_name>admitting_dr_id</stream_name>
+      </field>
+      <field>
+        <column_name>doctorname</column_name>
+        <stream_name>doctorname</stream_name>
+      </field>
+      <field>
+        <column_name>doctorsdepartment</column_name>
+        <stream_name>doctorsdepartment</stream_name>
+      </field>
+      <field>
+        <column_name>category</column_name>
+        <stream_name>category</stream_name>
+      </field>
+      <field>
+        <column_name>submission_date</column_name>
+        <stream_name>submission_date</stream_name>
+      </field>
+      <field>
+        <column_name>tpa_id</column_name>
+        <stream_name>tpa_id</stream_name>
+      </field>
+      <field>
+        <column_name>center_id</column_name>
+        <stream_name>center_id</stream_name>
+      </field>
+      <field>
+        <column_name>act_description</column_name>
+        <stream_name>act_description</stream_name>
+      </field>
+      <field>
+        <column_name>plan_id</column_name>
+        <stream_name>plan_id</stream_name>
+      </field>
+      <field>
+        <column_name>registration_date</column_name>
+        <stream_name>registration_date</stream_name>
+      </field>
+      <field>
+        <column_name>rate_plan_id</column_name>
+        <stream_name>rate_plan_id</stream_name>
+      </field>
+      <field>
+        <column_name>insurance_category_id</column_name>
+        <stream_name>insurance_category_id</stream_name>
+      </field>
+      <field>
+        <column_name>centername</column_name>
+        <stream_name>centername</stream_name>
+      </field>
+      <field>
+        <column_name>rate_plan</column_name>
+        <stream_name>rate_plan</stream_name>
+      </field>
+      <field>
+        <column_name>insurance_plan</column_name>
+        <stream_name>insurance_plan</stream_name>
+      </field>
+      <field>
+        <column_name>insurance_plan_type</column_name>
+        <stream_name>insurance_plan_type</stream_name>
+      </field>
+      <field>
+        <column_name>patient_type</column_name>
+        <stream_name>patient_type</stream_name>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>544</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+  <attributes />
+</transformation>
